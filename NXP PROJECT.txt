@@ -1,0 +1,30 @@
+NXP PROJECT
+BIRP
+
+https://forum.arduino.cc/t/esp32-spi-api-under-the-ardino-ide/691603
+
+https://www.electronicshub.org/esp32-pinout/
+
+https://ocw.cs.pub.ro/courses/iothings/laboratoare/lab7
+
+https://www.youtube.com/watch?v=_A2KwuiE7Ww&ab_channel=Hacks360
+
+https://www.programmingboss.com/2021/04/esp32-arduino-serial-communication-with-code.html#gsc.tab=0
+
+https://courses.ideate.cmu.edu/16-223/f2020/text/code/MQTT-Plotter.html
+
+spi comm
+https://randomnerdtutorials.com/esp32-spi-communication-arduino/
+
+mosquitto cu wifi?
+https://gist.github.com/IntegrityKnight/d7a9b1fb726df73c7a5915bd6c72ed9e
+
+
+sunete pasari
+https://www.massaudubon.org/news/latest/10-common-bird-sounds
+
+
+
+COMPONENTS
+
+MQ135 air quality sensor

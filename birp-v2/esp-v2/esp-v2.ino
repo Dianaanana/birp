@@ -44,8 +44,12 @@ PubSubClient client(espClient);
 
 void setup() {
   pinMode(BUTTON_PIN, INPUT);
+
+  // Serial is used for debug
   Serial.begin(115200);
+  // Serial2 is used for communication between esp32 and arduino
   Serial2.begin(9600, SERIAL_8N1, RX_PIN, TX_PIN);
+       
   servo.attach(4);
   dht.begin();
 
@@ -131,7 +135,8 @@ void loop() {
   }
 
   Serial.println("Message Received: ");
-  Serial.println(Serial2.readString());
+  String air = Serial2.readString();
+  Serial.println(air);
 
   float umiditate = dht.readHumidity();
   float temperatura = dht.readTemperature();
@@ -145,18 +150,19 @@ void loop() {
   Serial.print(temperatura);
   Serial.print("\n");
 
-  if (refresh_citire == 1) {
-    citire();
-  }
+//  if (refresh_citire == 1) {
+//    citire();
+//  }
 
-  // conditie
-  if (//todo conditie) {
+  // conditie de timp timer
+//  if (//todo conditie) {
     doc["temp"] = temperatura;
     doc["hum"] = umiditate;
-    doc["air"] = analogRead(A0); // de pe seriala 2?
+    doc["air"] = air; // de pe seriala 2?
 
     serializeJson(doc, json);
-}
+    client.publish(topic, json);
+//}
 
 client.loop();
 // connecting to a mqtt broker
